@@ -10,12 +10,19 @@ develop in the way it seems appropriate. (5 days) A customer requires to obtain 
 registered in an external DB.
 
 We know that the information of the users in the DB consists of the following attributes:
+
   o Name
+  
   o Surname
+  
   o Active (Flag)
+  
   o Email
+  
   o City
+  
   o Birthday
+  
   o Creation Date
 
 It is intended to elaborate from the previous information a Rest java API:
