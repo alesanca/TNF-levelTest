@@ -3,6 +3,7 @@ const usersModel = require("./users.model");
 module.exports.createAcc = createAcc;
 module.exports.activeUsers = activeUsers;
 module.exports.citiesList = citiesList;
+module.exports.datesList = datesList;
 
 function createAcc(req, res) {
     return usersModel
@@ -19,10 +20,17 @@ function activeUsers(req, res) {
 
 function citiesList(req, res) {
     let { letter } = req.body;
-    console.log(letter);
     return usersModel.find({}).then(
         response => {
             res.json(response.filter(y => y.city[0] == letter))
+        }
+    )
+}
+
+function datesList( req , res){
+    return usersModel.find({}).then(
+        response => {
+            res.json(response.sort(response.creationAt))
         }
     )
 }
