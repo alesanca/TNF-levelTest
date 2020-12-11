@@ -30,7 +30,7 @@ function citiesList(req, res) {
 function datesList( req , res){
     return usersModel.find({}).then(
         response => {
-            res.json(response.sort(response.creationAt))
+            res.json(response.sort(response.creationAt));
         }
     )
 }
