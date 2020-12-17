@@ -8,7 +8,7 @@ const app = express();
 const cors = require("cors");
 
 mongoose.connect(
-  `mongodb+srv://admin:admin@cluster0.emit1.mongodb.net/<dbname>?retryWrites=true&w=majority`, {
+  ``, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
